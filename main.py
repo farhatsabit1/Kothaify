@@ -46,7 +46,6 @@ LLKHF_INJECTED = 0x10
 KEYEVENTF_KEYUP = 0x0002
 KEYEVENTF_UNICODE = 0x0004
 
-# Find bundled resources both when running Python and when frozen as EXE.
 def resource_path(filename):
     if getattr(sys, "frozen", False):
         base_path = sys._MEIPASS
@@ -58,7 +57,6 @@ def resource_path(filename):
 
 ICON_PATH = resource_path("icon.ico")
 
-# Keep user settings beside the executable when packaged.
 if getattr(sys, "frozen", False):
     CONFIG_FILE = Path(sys.executable).resolve().parent / "bangla_phonetic_settings.json"
 else:
@@ -817,13 +815,11 @@ def create_gui():
     root.geometry("440x390")
     root.resizable(False, False)
 
-    # Use icon.ico in the window title bar and taskbar.
     try:
         root.iconbitmap(ICON_PATH)
     except tk.TclError as exc:
         print("Could not set window icon:", exc)
 
-    # Closing X exits the entire app.
     root.protocol("WM_DELETE_WINDOW", exit_app)
 
     app_container = ttk.Frame(root, padding=20)
