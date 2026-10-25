@@ -23,7 +23,7 @@ Since this application is fully portable, getting started takes less than 10 sec
 
 1. Connect your Windows PC to **Wi-Fi or an active internet connection** (required for word processing).
 2. Head over to the Releases section on the right side of this page.
-3. Download the latest version of the executable file.
+3. Download the latest version of the executable file (Kothaify.exe).
 4. Move the downloaded file to your preferred folder (e.g., `Desktop`, `Documents`, or `Program Files`).
 5. Double-click the file to launch it. 
 
